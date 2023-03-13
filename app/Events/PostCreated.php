@@ -28,10 +28,8 @@ class PostCreated implements ShouldBroadcast
      *
      * @return array<int, \Illuminate\Broadcasting\Channel>
      */
-    public function broadcastOn(): array
+    public function broadcastOn()
     {
-        return [
-            new Channel('post-created'),
-        ];
+        return    new Channel('post-created');
     }
 }
