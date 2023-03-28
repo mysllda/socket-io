@@ -30,6 +30,6 @@ class PostCreated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return    new Channel('post-created');
+        return new Channel('post-created');
     }
 }

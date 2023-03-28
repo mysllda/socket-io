@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\PostController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -24,6 +25,8 @@ Route::get('create-post', function () {
 
     return 'ok';
 });
+
+Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');
